@@ -1,6 +1,7 @@
 package sample;
 
 import javafx.event.ActionEvent;
+import javafx.scene.control.TextArea;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -28,6 +29,7 @@ public class Controller {
     public ImageView img14;
     public ImageView img15;
     public ImageView img16;
+    public TextArea fieldmsg;
 
     private State state=State.NEW;
 
@@ -247,6 +249,7 @@ public class Controller {
                 {
                     state=State.END;
                     //ouput Text to textfield or area !
+                    fieldmsg.appendText("You win the Game ! ");
                 }
             }
 
@@ -277,6 +280,7 @@ public class Controller {
                 field[i][j]=false;
 
         generateField();
+        fieldmsg.clear();
     }
 
     private void generateField() {
@@ -284,10 +288,11 @@ public class Controller {
         state=State.GENERATE;
         try {
             Random random = new Random();
-            for (i = 0; i < 19; i++) {
+            for (i = 0; i < 1; i++) {
                 processClick(random.nextInt(16) + 1);
             }
             state=State.PLAYING;
+            fieldmsg.clear();
         }catch(Exception e){
             e.printStackTrace();
         }

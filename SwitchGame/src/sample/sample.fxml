@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="484.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
     <children>
@@ -109,6 +110,9 @@
                 </ImageView>
             </children>
         </GridPane>
-      <TextField fx:id="fieldmsg" layoutX="53.0" layoutY="428.0" prefHeight="31.0" prefWidth="470.0" />
+      <TextArea fx:id="fieldmsg" layoutX="118.0" layoutY="381.0" prefHeight="91.0" prefWidth="358.0">
+         <font>
+            <Font name="Consolas Bold" size="30.0" />
+         </font></TextArea>
     </children>
 </Pane>
